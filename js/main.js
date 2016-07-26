@@ -26,6 +26,33 @@ jQuery(document).ready(function($) {
     });
       
 
+
+    /*------ select language hover-----*/
+    $('.lang').hover(
+        function() {
+            $('.firstLevel').toggleClass('blur');
+        },
+        function() {
+            $('.firstLevel').toggleClass('blur');
+        }
+    );
+
+    /*------ side nav li add class if has submenu-----*/
+    $('.firstLevel li, .secondLevel li').has('ul').addClass('hasUl');
+
+    /*------ side nav li hover-----*/
+    $('.sideNav li').hover(
+        function() {
+            $(this).siblings('li').css('opacity', '.7');
+            $(this).css('opacity', '1');
+        },
+        function() {
+            $(this).siblings('li').css('opacity', '1');
+        }
+    );
+
+
+
     /*---------------------------
                                   MENU TOGGLE
     ---------------------------*/

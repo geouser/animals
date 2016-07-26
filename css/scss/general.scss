@@ -55,26 +55,45 @@ nav {
         position: relative;
         width: 100%;
         margin: 0;
+        padding-top: 195px;
+        height: 100%;
         li {
             display: block;
-            ul.secondLevel {
+            ul {
                 width: 220px;
                 padding-top: 195px;
                 position: absolute;
-                left: -200%;
-                opacity: 0;
-                top: 0;
-                background-color: peru;
-                -webkit-transition: left 0, opacity .2s;
-                   -moz-transition: left 0, opacity .2s;
-                    -ms-transition: left 0, opacity .2s;
-                     -o-transition: left 0, opacity .2s;
-                        transition: left 0, opacity .2s;
+                top: 0; bottom: 0;
+                -webkit-transition: left 0s, opacity .2s;
+                   -moz-transition: left 0s, opacity .2s;
+                    -ms-transition: left 0s, opacity .2s;
+                     -o-transition: left 0s, opacity .2s;
+                        transition: left 0s, opacity .2s;
+                &.secondLevel {
+                    left: 100%;
+                    opacity: 0;
+                    top: 100%;
+                    background-color: peru;
+                     ul.thirdLevel {
+                        background-color: wheat;
+                        opacity: 0;
+                        left: 100%;
+                    }
+                }
             }
+
             &:hover {
                 ul.secondLevel {
-                    left: 100%;
+                    top: 0%;
                     opacity: 1;
+                }
+            }
+            ul.secondLevel {
+                li:hover {
+                    ul.thirdLevel {
+                        top: 0%;
+                        opacity: 1;
+                    }   
                 }
             }
         }

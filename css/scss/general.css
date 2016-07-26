@@ -1018,11 +1018,11 @@ nav {
         opacity: 0;
         top: 0;
         background-color: peru;
-        -webkit-transition: left 0, opacity .2s;
-        -moz-transition: left 0, opacity .2s;
-        -ms-transition: left 0, opacity .2s;
-        -o-transition: left 0, opacity .2s;
-        transition: left 0, opacity .2s; }
+        -webkit-transition: left 0s, opacity .2s;
+        -moz-transition: left 0s, opacity .2s;
+        -ms-transition: left 0s, opacity .2s;
+        -o-transition: left 0s, opacity .2s;
+        transition: left 0s, opacity .2s; }
       nav ul li:hover ul.secondLevel {
         left: 100%;
         opacity: 1; }

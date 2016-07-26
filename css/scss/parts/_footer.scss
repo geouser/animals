@@ -30,6 +30,10 @@
 		width: 100%;
 		background-color: transparent;
 
+		ul {
+			margin: 0;
+		}
+
 		.menu {
 			@extend %clearfix;
 			padding-bottom: 55px;

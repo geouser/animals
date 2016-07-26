@@ -3,7 +3,12 @@
 .brand-countrys, .brand-menu, .brand-fishlix, .brand-mariman, .brand-complete, 
 .brand-crispy, .brand-nature, .brand-nutri, .brand-optilife, .brand-colombine, 
 .brand-lara, .brand-happy, .brand-orlux, .brand-cavalor
-{ display: inline-block; background: url('../images/brands-sprite.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+{ display: inline-block;
+	background: url('../images/brands-sprite.png') no-repeat;
+	overflow: hidden;
+	text-indent: -9999px;
+	text-align: left;
+	z-index: 0;}
  
 .brand-countrys { background-position: -5px -0px; width: 130px; height: 58px; }
 .brand-menu { background-position: -5px -63px; width: 120px; height: 26px; }

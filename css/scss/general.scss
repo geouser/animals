@@ -372,21 +372,86 @@ body {
 
 .offer {
     height: 560px;
+    .slick-track,
+    .slick-list {
+        height: 100%;
+    }
     &__slide {
+        display: flex !important;
+        display: -webkit-flex !important;
         @include flex($direction: column, $justify: center);
         height: 100%;
         width: 100%;
-        background-image: url("");
+        text-align: center;
+        background-image: url("../images/banner-main-page.jpg");
         background-repeat: no-repeat;
+        background-position: 0 100%;
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
         .button {
             margin: 55px auto;
         }
+        h1,
+        h2 {
+            color: #FFF;
+            font-size: 36px;
+            font-family: $nswb;
+        }
+        p {
+            font: 22px $nsw;
+            color: #FFF;
+        }
     }
 }
 
+
+.slick-dots {
+    bottom: 100px;
+    margin: 0;
+    z-index: 2;
+    li {
+        width: 12px; height: 12px;
+        background-color: #FFF;
+        margin: 0 7px;
+        -webkit-border-radius: 50% 50%;
+                border-radius: 50% 50%;
+        &.slick-active {
+            background-color: $blue;
+        }
+        * {
+            display: none;
+        }
+    }
+}
+
+
+.button {
+    background-color: $blue;
+    height: 45px;
+    padding: 0 45px;
+    color: #FFF;
+    font: 18px $ns;
+    border: none;
+    position: relative;
+    -webkit-border-radius: 30px;
+            border-radius: 30px;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 248px;
+        height: 120px;
+        z-index: -2;
+        background-image: url("../images/button-shadow.png");
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+    }
+}
 
 
 

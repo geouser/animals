@@ -1,6 +1,8 @@
 // COLORS
 // ---------------------------
 $blue:				#0c80d1;
+$orange: 			#ff5600;
+
 
 // FONTS
 // ---------------------------
@@ -36,6 +38,12 @@ h3,
 h4,
 h5 {
 
+}
+h2 {
+	color: #000;
+	font-size: 30.48px;
+	font-weight: normal;
+	font-family: $nswb;
 }
 .white {
 	color: #FFF;

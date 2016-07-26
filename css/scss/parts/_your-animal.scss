@@ -1,0 +1,114 @@
+.icon-others,
+.icon-rats,  
+.icon-pigeons,
+.icon-dogs,
+.icon-cats, 
+.icon-birds,
+.icon-chicken {
+	display: inline-block;
+	background: url('../images/your-animal-sprite.png') no-repeat;
+	overflow: hidden;
+	text-indent: -9999px;
+	text-align: left;
+}
+
+.icon-others { background-position: -5px -145px; width: 169px; height: 140px; }
+.icon-rats { background-position: -5px -394px; width: 168px; height: 99px; }
+.icon-pigeons { background-position: -5px -638px; width: 153px; height: 135px; }
+.icon-dogs { background-position: -5px -924px; width: 135px; height: 141px; }
+.icon-cats { background-position: -5px -1216px; width: 134px; height: 141px; }
+.icon-birds { background-position: -5px -1542px; width: 108px; height: 175px; }
+.icon-chicken { background-position: -5px -1877px; width: 107px; height: 150px; }
+
+.animals__box {
+	padding: 0 115px 185px;
+
+	&__row {
+		text-align: center;
+		padding-top: 115px;
+		margin-top: -30px;
+		background-image: url(../images/row-shadow.png);
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	.link {
+		display: inline-block;
+		vertical-align: top;
+		width: 260px;
+
+		&__icon {
+			width: 170px;
+			height: 120px;
+			position: relative;
+			border-radius: 85px 85px 0px 0px;
+			margin: 0 auto 35px;
+			-webkit-transition: background-color 0.3s ease;
+				 -o-transition: background-color 0.3s ease;
+					transition: background-color 0.3s ease;
+
+			i {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				-webkit-transform: translate(-50%, 0);
+					-ms-transform: translate(-50%, 0);
+					 -o-transform: translate(-50%, 0);
+						transform: translate(-50%, 0);
+			}
+		}
+
+		&__text {
+			color: #666;
+			font-size: 22.71px;
+			position: relative;
+			-webkit-transition: color 0.3s ease;
+				 -o-transition: color 0.3s ease;
+					transition: color 0.3s ease;
+
+			&:after {
+				content: '';
+				height: 2px;
+				width: 0;
+				bottom: 0;
+				left: 50%;
+				position: absolute;
+				-webkit-transform: translate(-50%, 0);
+					-ms-transform: translate(-50%, 0);
+					 -o-transform: translate(-50%, 0);
+						transform: translate(-50%, 0);
+
+				background-color: $orange;
+
+				-webkit-transition: all 0.3s ease;
+					 -o-transition: all 0.3s ease;
+						transition: all 0.3s ease;
+				opacity: 0;
+			}
+		}
+
+		&:hover {
+			.link__text {
+				color: $orange;
+
+				&:after {
+					width: 100%;
+					opacity: 1;
+				}
+			}
+
+			.link__icon {
+				background-color: #fff;
+			}
+
+			.icon-others { background-position: -5px -0px; width: 169px; height: 140px; }
+			.icon-rats { background-position: -5px -290px; width: 168px; height: 99px; }
+			.icon-pigeons { background-position: -5px -498px; width: 153px; height: 135px; }
+			.icon-dogs { background-position: -5px -778px; width: 135px; height: 141px; }
+			.icon-cats { background-position: -5px -1070px; width: 134px; height: 141px; }
+			.icon-birds { background-position: -5px -1362px; width: 108px; height: 175px; }
+			.icon-chicken { background-position: -5px -1722px; width: 107px; height: 150px; }
+		}
+	}
+}

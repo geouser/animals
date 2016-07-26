@@ -39,6 +39,9 @@ jQuery(document).ready(function($) {
 
     /*------ side nav li add class if has submenu-----*/
     $('.firstLevel li, .secondLevel li').has('ul').addClass('hasUl');
+    $('.hasUl').children('a').click(function(event){
+        event.preventDefault();
+    });
 
     /*------ side nav li hover-----*/
     $('.sideNav li').hover(

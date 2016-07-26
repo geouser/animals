@@ -43,13 +43,14 @@ jQuery(document).ready(function($) {
     /*------ side nav li hover-----*/
     $('.sideNav li').hover(
         function() {
-            $(this).siblings('li').css('opacity', '.7');
+            $(this).siblings('li').css('opacity', '.6');
             $(this).css('opacity', '1');
         },
         function() {
             $(this).siblings('li').css('opacity', '1');
         }
     );
+
 
 
 

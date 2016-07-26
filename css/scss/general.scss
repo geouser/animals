@@ -53,6 +53,7 @@ body {
     @include position(fixed, 0, auto, 0, 0);
     width: 240px;
     background-color: $blue;
+    z-index: 1000;
     
     /*  ---- logo ---  */ 
     .logo {
@@ -369,6 +370,22 @@ body {
 /*=====================================================================================*/
 /*  OFFER STYLES  */ 
 
+.offer {
+    height: 560px;
+    &__slide {
+        @include flex($direction: column, $justify: center);
+        height: 100%;
+        width: 100%;
+        background-image: url("");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        .button {
+            margin: 55px auto;
+        }
+    }
+}
 
 
 

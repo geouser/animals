@@ -90,6 +90,12 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
+    $('.offer__slide').slick({
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+
 
 
 }); // end file

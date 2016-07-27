@@ -446,9 +446,15 @@ body {
         text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
         display: inline-block;
         vertical-align: middle;
+        &.noShadow {
+            text-shadow: none
+        }
     }
     > p {
         text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+        &.noShadow {
+            text-shadow: none
+        }
     }
     h1,
     h2 {
@@ -477,6 +483,12 @@ body {
             margin: 55px auto;
         }
     }
+}
+
+.offerLogo {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;  
 }
 
 

@@ -3,7 +3,9 @@
 	padding-bottom: 180px;
 }
 .products-box {
-	@include flex($wrap: wrap);
+	width: 110%;
+	margin-left: -5%;  
+	@include flex($wrap: wrap, $justify: center);
 
 	&__item {
 		width: 255px;
@@ -13,6 +15,7 @@
 		border-radius: 5px;
 		overflow: hidden;
 		position: relative;
+		margin: 0 10px; 
 
 		&:after {
 			content: '';
@@ -103,6 +106,16 @@
 			&:hover span {
 				text-decoration: underline;
 			}
+		}
+	}
+	&--white {
+		li {
+			a {
+				color: #FFCAAF;
+			}
+			&:not(:last-child):after {
+					color: #FFCAAF; 
+				}
 		}
 	}
 }

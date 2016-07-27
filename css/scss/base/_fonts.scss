@@ -71,3 +71,15 @@
 	font-weight: bold;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Neo Sans W1G Medium';
+	src: url('../fonts/subset-NeoSansW1G-Medium.eot');
+	src: url('../fonts/subset-NeoSansW1G-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/subset-NeoSansW1G-Medium.woff2') format('woff2'),
+		 url('../fonts/subset-NeoSansW1G-Medium.woff') format('woff'),
+		 url('../fonts/subset-NeoSansW1G-Medium.ttf') format('truetype'),
+		 url('../fonts/subset-NeoSansW1G-Medium.svg#NeoSansW1G-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}

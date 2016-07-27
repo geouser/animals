@@ -423,11 +423,8 @@ body {
                 background-size: cover;
     height: 560px;
     text-align: center;
-    &:not(.offer--slider):before {
-        content: "";
-        height: 100%;
-        display: inline-block;
-        vertical-align: middle;
+    &:not(.offer--slider) {
+        @include flex($direction: column, $justify: center);
     }
     .slick-track,
     .slick-list {

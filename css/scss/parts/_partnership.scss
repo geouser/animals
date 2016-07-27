@@ -1,0 +1,44 @@
+/*=====================================================================================*/
+/*  PARTNERSHIP PAGE STYLES  */ 
+
+.partners {
+	width: 810px;
+	margin: -60px auto 0;  
+	&__item {
+		width: 100%;
+		padding: 40px;
+		position: relative;
+		text-align: left; 
+		margin-bottom: 20px;
+		-webkit-border-radius: 4px; 
+		 border-radius: 4px;  
+		background-color: wheat; 
+		img {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom:0;
+			left: auto;
+			margin: auto;
+			min-height: 100%;  
+		}
+		&__info {
+			display: inline-block;
+			vertical-align: middle;
+			width: 340px; 
+			h3 {
+				margin-top: 25px;
+				font: 20px $nsw;  
+				color: #000; 
+			}
+			p {
+				margin-top: 15px; 
+				font: 18px $nsw; 
+				color: #333;  
+			}
+			button {
+				margin-top: 25px; 
+			}
+		}
+	}
+}

@@ -18,11 +18,15 @@
 @import 'parts/your-animal';
 @import 'parts/footer';
 
-@import 'parts/contacts-page';
+@import 'parts/page-contatcs';
 @import 'parts/contacts-form';
 
-@import 'parts/about-page';
+@import 'parts/page-about';
 @import 'parts/article';
+
+@import 'parts/page-career';
+
+@import 'parts/page-faq';
 /*
 
 CSS clearfix----------  @extend %clearfix;

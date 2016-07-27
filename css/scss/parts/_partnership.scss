@@ -12,7 +12,7 @@
 		margin-bottom: 20px;
 		-webkit-border-radius: 4px; 
 		 border-radius: 4px;  
-		background-color: wheat; 
+		background-color: #EEE; 
 		img {
 			position: absolute;
 			right: 0;
@@ -21,19 +21,23 @@
 			left: auto;
 			margin: auto;
 			min-height: 100%;  
+			max-height: 100%;
+			overflow: hidden 
 		}
 		&__info {
 			display: inline-block;
 			vertical-align: middle;
+			position: relative;
+			z-index: 2; 
 			width: 340px; 
 			h3 {
 				margin-top: 25px;
-				font: 20px $nsw;  
+				font: 20px $nswm;  
 				color: #000; 
 			}
 			p {
 				margin-top: 15px; 
-				font: 18px $nsw; 
+				font: 18px $nswm; 
 				color: #333;  
 			}
 			button {

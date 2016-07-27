@@ -22,8 +22,11 @@
 @import 'parts/contacts-form';
 
 @import 'parts/page-about';
+
 @import 'parts/articles';
 @import 'parts/article';
+
+@import 'parts/partnership';
 
 @import 'parts/page-career';
 
@@ -427,7 +430,8 @@ body {
 
 .offer {
     background-repeat: no-repeat;
-        background-position: 0 100%;
+    margin-bottom: 40px;
+        background-position: 0 50%;
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
@@ -444,6 +448,9 @@ body {
         text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
         display: inline-block;
         vertical-align: middle;
+    }
+    > p {
+        text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
     }
     h1,
     h2 {
@@ -519,6 +526,14 @@ body {
         -webkit-background-size: 100% 100%;
              -o-background-size: 100% 100%;
                 background-size: 100% 100%;
+    }
+    &--light {
+        background-color: transparent;
+        border: 1px solid #0CB0D1;
+        color: #0CB0D1;
+        &:after {
+            display: none;
+        }
     }
 }
 

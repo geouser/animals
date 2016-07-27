@@ -1,4 +1,9 @@
+.products-list {
+	padding-bottom: 105px;
+}
+
 .products {
+
 	@include flex($wrap: wrap, $justify: center);
 	 &__item {
 	 	width: 255px;

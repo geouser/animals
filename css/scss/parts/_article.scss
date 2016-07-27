@@ -10,4 +10,20 @@
 		font-size: 30.48px;
 		margin-bottom: 15px;
 	}
+
+	&--news {
+		padding-top: 30px;
+
+		article {
+			text-align: left;
+		}
+
+		p:not(:last-of-type) {
+			margin-bottom: 50px;
+		}
+
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
 }

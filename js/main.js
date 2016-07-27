@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
-    $('.offer').slick({
+    $('.offer--slider').slick({
         fade: true,
         arrows: false,
         dots: true

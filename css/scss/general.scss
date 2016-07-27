@@ -271,21 +271,56 @@ body {
     height: 60px;
     background-color: rgba(255,255,255, .2);
     line-height: 60px;
-    padding-left: 60px;
-    background-image: url("../images/search.svg");
-    background-repeat: no-repeat;
-    -webkit-background-size: 20px 16px;
-         -o-background-size: 20px 16px;
-            background-size: 20px 16px;
-    background-position: 37px 50%;
+    padding-left: 40px;
+    padding-right: 20px;
+    text-align: left;
     @include transition(all, .2s);
     margin-top: 40px;
+    .wrap {
+        position: relative;
+        height: 100%;
+    }
     input {
-        width: 100%;
         background: none;
         border: none;
         color: #FFF;
+        height: 20px;
+    }
+    input[type="submit"] {
+        height: 20px;
+        width: 16px;
+        display: inline-block;
+        color: red;
+        z-index: 2;
+        margin-top: 20px;
+        background-image: url("../images/search.svg");
+        background-repeat: no-repeat;
+        text-indent: -10000px;
+        border: none;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        transition: all .2s ease;
+        margin-left: -20px;
+    }
+    input[type="search"] {
+        width: 20px;      
         font: 14px $ns;
+        margin-top: 20px;
+        position: relative;
+        z-index: 3;
+        transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+        cursor: pointer;
+        &:focus {
+          width: 80%;
+          z-index: 1;
+          border-bottom: 1px solid rgba(255,255,255, .4);
+          cursor: text;  
+          +  input[type="submit"] {
+              z-index: 4;
+              margin-left: 0px;
+          }
+        }
     }
 }
 
@@ -381,10 +416,29 @@ body {
 /*  OFFER STYLES  */ 
 
 .offer {
+    @include flex($direction: column, $justify: center);
+    background-repeat: no-repeat;
+        background-position: 0 100%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
     height: 560px;
     .slick-track,
     .slick-list {
         height: 100%;
+    }
+    > h1 {
+        text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+    h1,
+    h2 {
+        color: #FFF;
+        font-size: 36px;
+        font-family: $nswb;
+    }
+    p {
+        font: 22px $nsw;
+        color: #FFF;
     }
     &__slide {
         display: flex !important;
@@ -401,16 +455,6 @@ body {
                 background-size: cover;
         .button {
             margin: 55px auto;
-        }
-        h1,
-        h2 {
-            color: #FFF;
-            font-size: 36px;
-            font-family: $nswb;
-        }
-        p {
-            font: 22px $nsw;
-            color: #FFF;
         }
     }
 }

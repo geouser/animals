@@ -1,6 +1,8 @@
 /*=====================================================================================*/
 /*  NEWS PAGE STYLES  */ 
-
+.news {
+	padding-bottom: 180px;
+}
 .articles {
 	 @include flex($wrap: wrap, $justify: center);
 	 width: 850px;

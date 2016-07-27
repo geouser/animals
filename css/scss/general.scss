@@ -560,7 +560,55 @@ body {
 /*  STYLES  */ 
 
 
+/*decorative animals before sections*/
+.pre-dog {
+    position: relative;
 
+    &:before {
+        content: '';
+        width: 87px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        margin-left: -44px;
+        top: -122px;
+        background-image: url(../images/pre-dog.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+.pre-bird {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 74px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        margin-left: -37px;
+        top: -130px;
+        background-image: url(../images/pre-bird.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+.pre-cat {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 61px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        margin-left: -32px;
+        top: -130px;
+        background-image: url(../images/pre-cat.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
 
 
 

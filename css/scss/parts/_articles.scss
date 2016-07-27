@@ -12,6 +12,10 @@
 	 	background-color: #0CB0D1; 
 	 	text-align: left;
 	 	color: #FFF;
+	 	-webkit-border-radius: 6px; 
+	 	border-radius: 6px; 
+	 	@include transition(all, .2s);
+	 	overflow: hidden;
 	 	header {
 	 		height: 186px;
 	 		position: relative;
@@ -29,7 +33,20 @@
 	 		p {
 	 			font: 18px $nsw;
 	 			color: #fff;
-	 			opacity: 0 
+	 			opacity: 0;
+	 			@include transition(all, .2s);
+	 			position: relative;
+	 			z-index: 2; 
+	 		}
+	 		&:after {
+	 			content: "";
+	 			height: 100%;
+	 			width: 100%;
+	 			display: block;
+	 			position: absolute; left: 0; top: 0;
+	 			background-color: rgba(0,0,0, .5);  
+	 			@include transition(all, .2s);
+	 			opacity: 0;    	
 	 		}
 	 	}
 	 	&__info {
@@ -44,9 +61,14 @@
 	 	}
 	 	&:hover {
 	 		background-color: #FF5600; 
-	 	}
-	 	&:hover header p {
-	 		opacity: 1 
+	 		header {
+	 			p {
+	 				opacity: 1;
+	 			}
+	 			&:after {
+	 				opacity: 1; 
+	 			}
+	 		}
 	 	}
 	 } 
 }

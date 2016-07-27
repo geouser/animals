@@ -20,8 +20,17 @@
 .icon-birds { background-position: -5px -1542px; width: 108px; height: 175px; }
 .icon-chicken { background-position: -5px -1877px; width: 107px; height: 150px; }
 
+
+.your-animal {
+	padding-bottom: 185px;
+
+	&--products {
+		padding-bottom: 95px;
+	}
+}
+
 .animals__box {
-	padding: 0 115px 185px;
+	padding: 0 115px 0;
 
 	&__row {
 		text-align: center;

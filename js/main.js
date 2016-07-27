@@ -98,4 +98,58 @@ jQuery(document).ready(function($) {
 
 
 
+/*---------------------------
+                              GOOGLE MAP
+---------------------------*/
+  var map;
+  function googleMap_initialize() {
+    var lat = $('.map-box').data('lat');
+    var long = $('.map-box').data('lng');
+    var mapCenterCoord = new google.maps.LatLng(lat, long);
+    var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+
+    var mapOptions = {
+      center: mapCenterCoord,
+      zoom: 16,
+      //draggable: false,
+      disableDefaultUI: true,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    var markerImage = new google.maps.MarkerImage('images/location.png');
+    var marker = new google.maps.Marker({
+      icon: markerImage,
+      position: mapMarkerCoord, 
+      map: map,
+      title:"LOGO"
+    });
+    
+    $(window).resize(function (){
+      map.setCenter(mapCenterCoord);
+    });
+  }
+  if ( $('.map-box').length > 0) {
+    googleMap_initialize();   
+  }
+
+
+
+/*---------------------------
+                              CONTACTS FORM
+---------------------------*/
+$('input, textarea').on('focusin', function(event) {
+    event.preventDefault();
+    $(this).parent().addClass('focus');
+});
+$('input, textarea').on('focusout', function(event) {
+    event.preventDefault();
+    if ( !$(this).val() ) {
+        $(this).parent().removeClass('focus');
+    }
+    
+});
+
 }); // end file

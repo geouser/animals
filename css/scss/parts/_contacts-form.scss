@@ -1,0 +1,107 @@
+.contacts-form {
+	padding-bottom: 185px;
+
+	h2 {
+		margin-bottom: 12px;
+	}
+
+	h2+small {
+		font-size: 22.86px;
+	}
+
+	form {
+		padding: 0 135px;
+		text-align: center;
+		padding-top: 35px;
+		
+		.flex {
+			@include flex($wrap: wrap, $justify: space-between);
+		}
+		.input {
+			width: 250px;
+			height: 52px;
+			border-radius: 4px;
+			background-color: #f6f6f6;
+			position: relative;
+			margin-bottom: 20px;
+			cursor: text;
+			border: 1px solid #f6f6f6;
+			-webkit-transition: all 0.3s ease;
+				 -o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+
+			&--msg {
+				width: 100%;
+				height: 100px;
+			}
+
+			&:hover,
+			&.focus {
+				border: 1px solid $blue;
+				background-color: #fff;
+
+				label {
+					color: $blue;
+					font-size: 12.7px;
+					top: 7px;
+				}
+			}
+
+			label {
+				position: absolute;
+				left: 18px;
+				top: 13px;
+				color: #999;
+				font-size: 20.32px;
+				-webkit-transition: all 0.3s ease;
+					 -o-transition: all 0.3s ease;
+						transition: all 0.3s ease;
+			}
+
+			input,
+			textarea {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding-left: 18px;
+				padding-top: 16px;
+				padding-bottom: 0;
+				background-color: transparent;
+				border: 0;
+				font-size: 20.32px;
+				color: #000;
+				font-family: $nsw;
+			}
+			textarea {
+				padding-top: 21px;
+				resize: none;
+			}
+		}
+
+		button {
+			display: inline-block;
+			height: 46px;
+			width: 186px;
+			border-radius: 46px;
+			margin-top: 20px;
+			border: 2px solid $blue;
+			background-color: transparent;
+			color: $blue;
+			font-family: $nsw;
+			font-size: 18px;
+			-webkit-transition: all 0.3s ease;
+				 -o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+
+			&:hover {
+				background-color: $blue;
+				color: #fff;
+			}
+		}
+	}
+}
+

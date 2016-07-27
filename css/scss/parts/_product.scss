@@ -60,18 +60,19 @@
  	overflow: hidden;
  	-webkit-border-radius: 4px; 
  	border-radius: 4px; 
- 	padding-top: 100px; 
- 	img {
- 		position: absolute;
- 		top: 2px;
- 		left: 0;
- 		right: 0;
- 		margin: auto; 
- 		max-width: 90%;
- 		max-height: 98px;  
- 	}
 	&__item {
 	 	width: 255px;
+	 	padding-top: 100px; 
 	 	margin: 0 10px 20px;
+	 	position: relative;
+	 	img {
+	 		position: absolute;
+	 		top: 2px;
+	 		left: 0;
+	 		right: 0;
+	 		margin: auto; 
+	 		max-width: 90%;
+	 		max-height: 98px;  
+	 	}
 	}
 }

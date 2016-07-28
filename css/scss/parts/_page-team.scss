@@ -29,6 +29,12 @@
 			width: 32.5%;
 		}
 
+		@media ($phones) {
+			width: 255px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
 
 		.content {
 			position: absolute;

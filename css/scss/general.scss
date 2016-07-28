@@ -585,6 +585,10 @@ body {
                 background-size: cover;
     height: 560px;
     text-align: center;
+    @include m1000 {
+        height: 500px;
+        padding-top: 50px;
+    }
     &:not(.offer--slider) {
         @include flex($direction: column, $justify: center);
     }
@@ -636,7 +640,7 @@ body {
      /*.................media.............*/
     @include m1000 {
         &__slide {
-            padding: 70px 40px 0; 
+            padding: 0px 40px 0; 
         }
         h1,
         h2 {

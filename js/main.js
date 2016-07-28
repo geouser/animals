@@ -28,6 +28,9 @@ jQuery(document).ready(function($) {
 
 
     /*------ select language hover-----*/
+    $('.lang .selected').click(function(event){
+        event.preventDefault();
+    });
     $('.lang').hover(
         function() {
             $('.firstLevel').toggleClass('blur');
@@ -44,15 +47,48 @@ jQuery(document).ready(function($) {
     });
 
     /*------ side nav li hover-----*/
-    $('.sideNav li').hover(
-        function() {
-            $(this).siblings('li').css('opacity', '.6');
-            $(this).css('opacity', '1');
-        },
-        function() {
-            $(this).siblings('li').css('opacity', '1');
-        }
-    );
+    if ($(window).width() > 1000) {
+        $('.sideNav li').hover(
+            function() {
+                $(this).siblings('li').css('opacity', '.6');
+                $(this).css('opacity', '1');
+            },
+            function() {
+                $(this).siblings('li').css('opacity', '1');
+            }
+        );
+    }
+
+    /*---------------------------
+                                  WINDOW WIDTH + RESIZE
+    ---------------------------*/
+    if ($(window).width() <= 1000) {
+        $('.firstLevel > .hasUl > a').click(function(){
+            $(this).siblings('ul').addClass('shown');
+        });
+        $('.secondLevel>.hasUl>a').click(function(){
+            $(this).siblings('ul').addClass('shown');
+        });
+        $('.backMenu').click(function(event){
+            event.preventDefault();
+            $(this).parent('ul').removeClass('shown');
+        });
+    }
+    $(window).resize(function() {
+      if ($(window).width() <= 1000) {
+            $('.firstLevel > .hasUl > a').click(function(){
+                $(this).siblings('ul').addClass('shown');
+            });
+            $('.secondLevel>.hasUl>a').click(function(){
+                $(this).siblings('ul').addClass('shown');
+            });
+            $('.backMenu').click(function(event){
+                event.preventDefault();
+                $(this).parent('ul').removeClass('shown');
+            });
+      }
+    });
+
 
 
 
@@ -63,12 +99,12 @@ jQuery(document).ready(function($) {
     $('.menu-button').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
-        $(this).siblings('header').toggleClass('active');
+        $(this).parent().siblings('.sideNav').toggleClass('active');
         if ($('header').hasClass('active')) {
-                $('body, html').css('overflow', 'hidden');
-            } else {
-                $('body, html').css('overflow', 'visible');
-            }
+            $('body, html').css('overflow', 'hidden');
+        } else {
+            $('body, html').css('overflow', 'visible');
+        }
     });
 
 

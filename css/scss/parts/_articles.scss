@@ -15,6 +15,11 @@
 		   -moz-justify-content: space-between;
 			    justify-content: space-between;
 	 }
+	 @media (max-width: 1000px) {
+	    -webkit-justify-content: center;
+		   -moz-justify-content: center;
+			    justify-content: center;
+	 }
 	 &__item {
 	 	width: 255px;
 	 	margin: 0 10px 20px;
@@ -30,6 +35,11 @@
 	 		width: 32.5%;
 	 		margin-left: 0;
 	 		margin-right: 0;
+	 	}
+	 	@media (max-width: 1000px) {
+	 		width: 255px;
+	 		margin-left: 10px;
+	 		margin-right: 10px;
 	 	}
 	 	header {
 	 		height: 186px;

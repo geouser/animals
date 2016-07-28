@@ -41,6 +41,10 @@
 		width: 100%;
 	}
 
+	@media (max-width: 1000px) {
+		width: 830px;
+	}
+
 	&__row {
 		text-align: center;
 		padding-top: 115px;

@@ -45,6 +45,10 @@
 		width: 830px;
 	}
 
+	@include m1000 {
+		width: 100%;
+	}
+
 	&__row {
 		text-align: center;
 		padding-top: 115px;
@@ -56,6 +60,9 @@
 
 		@media (max-width: 1100px) {
 			padding-top: 90px;
+		}
+		@include m1000 {
+			background: none;
 		}
 	}
 
@@ -69,6 +76,13 @@
 		}
 		@media (max-width: 1100px) {
 			width: 220px;
+		}
+		@include m1000 {
+			width: 45%;
+			margin-bottom: 40px; 
+		}
+		@include m600 {
+			width: 100%; 
 		}
 
 		&__icon {
@@ -89,6 +103,9 @@
 					-ms-transform: translate(-50%, 0);
 					 -o-transform: translate(-50%, 0);
 						transform: translate(-50%, 0);
+			}
+			@include m1000 {
+				height: 150px; 
 			}
 		}
 

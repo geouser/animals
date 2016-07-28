@@ -10,7 +10,16 @@
 		width: 33.3333%;
 		padding: 0 15px;
 		text-align: left;
+		/*.................media.............*/
+        @include m750 {
+           width: 100%;
+        }
 	}
+	@include m750 {
+       -webkit-flex-direction: column;
+       -ms-flex-direction: column;
+       flex-direction: column;
+    }
 }
 
 
@@ -25,6 +34,17 @@
 			img {
 				max-width: 100%;
 			}
+			/*.................media.............*/
+	        @include m750 {
+	           float: left;
+	           margin: 0 20px 0px 0; 
+	           width: 40%;
+	        }
+	        @include m400 {
+	           float: none;
+	           width: 100%;
+	           margin-bottom: 20px; 
+	        }
 		}
 		
 		&__text {
@@ -46,6 +66,8 @@
 				font-size: 15.24px;
 			}
 		}
-		
+	    @include m750 { 
+           margin-bottom: 40px; 
+        }
 	}
 }

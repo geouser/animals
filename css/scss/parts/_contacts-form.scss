@@ -13,6 +13,11 @@
 		padding: 0 135px;
 		text-align: center;
 		padding-top: 35px;
+
+		@media (max-width: 1350px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 		
 		.flex {
 			@include flex($wrap: wrap, $justify: space-between);
@@ -29,6 +34,10 @@
 			-webkit-transition: all 0.3s ease;
 				 -o-transition: all 0.3s ease;
 					transition: all 0.3s ease;
+
+			@media (max-width: 1350px) {
+				width: 32.5%;
+			}
 
 			&--msg {
 				width: 100%;

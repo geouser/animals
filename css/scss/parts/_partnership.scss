@@ -3,7 +3,11 @@
 
 .partners {
 	width: 810px;
-	margin: -60px auto 0;  
+	margin: -60px auto 0; 
+
+	@media (max-width: 1100px) {
+		width: 100%;
+	} 
 	&__item {
 		width: 100%;
 		padding: 40px;
@@ -43,7 +47,11 @@
 			p {
 				margin-top: 15px; 
 				font: 18px $nswm; 
-				color: #333;  
+				color: #333; 
+
+				@media (max-width: 1100px) {
+					text-shadow: 0 0 3px #fff;
+				} 
 			}
 			button {
 				margin-top: 25px; 

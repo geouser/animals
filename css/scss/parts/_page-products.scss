@@ -7,6 +7,11 @@
 	margin-left: -5%;  
 	@include flex($wrap: wrap, $justify: center);
 
+	@media (max-width: 1350px) {
+		width: 100%;
+		margin-left: 0;
+	}
+
 	&__item {
 		width: 255px;
 		height: 160px;
@@ -16,6 +21,10 @@
 		overflow: hidden;
 		position: relative;
 		margin: 0 10px; 
+
+		@media (max-width: 1350px) {
+			margin-bottom: 20px;
+		}
 
 		&:after {
 			content: '';
@@ -123,6 +132,11 @@
 
 .product-box {
 	padding: 0 135px 150px;
+
+	@media (max-width: 1350px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .product__features {

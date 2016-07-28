@@ -39,6 +39,11 @@
 	text-align: center;
 	@include flex($wrap: wrap, $justify: center);
 
+	@media (max-width: 1350px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	a {
 		width: 16.66667%;
 		position: relative;

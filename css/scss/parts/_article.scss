@@ -4,6 +4,11 @@
 		font-size: 20.32px;
 		color: #666;
 		line-height: 30.48px;
+
+		@media (max-width: 1350px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	h2 {

@@ -8,6 +8,10 @@
 .faq-box {
 	padding: 0 115px;
 
+	@media (max-width: 1350px) {
+		padding: 0;
+	}
+
 	&__link {
 		cursor: pointer;
 		text-align: left;

@@ -2,6 +2,10 @@
 	padding: 0 115px;
 	@include flex();
 
+	@media (max-width: 1350px) {
+		padding: 0;
+	}
+
 	&__item {
 		width: 33.3333%;
 		padding: 0 15px;
@@ -16,6 +20,7 @@
 	.news-box__item {
 		&__preview {
 			margin-bottom: 22px;
+			text-align: center;
 
 			img {
 				max-width: 100%;
@@ -24,6 +29,10 @@
 		
 		&__text {
 			padding-left: 22px;
+
+			@media (max-width: 1350px) {
+				padding: 0 10px;
+			}
 
 			h3 {
 				color: #000;

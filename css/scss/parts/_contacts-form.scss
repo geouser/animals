@@ -7,6 +7,10 @@
 
 	h2+small {
 		font-size: 22.86px;
+
+		@media ($phones) {
+			font-size: 18px;
+		}
 	}
 
 	form {
@@ -37,6 +41,9 @@
 
 			@media (max-width: 1350px) {
 				width: 32.5%;
+			}
+			@media ($phones) {
+				width: 100%;
 			}
 
 			&--msg {

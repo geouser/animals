@@ -24,6 +24,11 @@
 			 -o-transition: all 0.3s ease;
 				transition: all 0.3s ease;
 
+		@media ($phones) {
+			padding: 12px 60px 12px 20px;
+			font-size: 18px;
+		}
+
 		&:first-of-type {
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
@@ -64,6 +69,10 @@
 			-webkit-transition: all 0.3s ease;
 				 -o-transition: all 0.3s ease;
 					transition: all 0.3s ease;
+
+			@media ($phones) {
+				right: 24px;
+			}
 		}
 		&:hover {
 			.caret {
@@ -91,8 +100,18 @@
 		background-color: #fff;
 		margin-top: -2px;
 
+		@media ($phones) {
+			padding: 20px;
+			font-size: 17px;
+			line-height: normal;
+		}
+
 		p {
 			margin-bottom: 14px;
+
+			@media ($phones) {
+				margin-bottom: 8px;
+			}
 		}
 
 		&:last-of-type {

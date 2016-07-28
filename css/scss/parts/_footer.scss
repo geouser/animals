@@ -60,6 +60,23 @@
 			width: 20%;
 			float: left;
 
+			@media ($phones) {
+				width: 33.3333%;
+				float: none;
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 -2px 30px;
+			}
+
+			@media (max-width: 600px) {
+				width: 50%;
+			}
+
+			@media (max-width: 400px) {
+				width: 100%;
+				text-align: center;
+			}
+
 			a {
 				font-family: $nswb;
 				color: #000;
@@ -75,6 +92,10 @@
 
 		.sub-menu {
 			padding-top: 10px;
+
+			@media ($phones) {
+				padding-top: 0;
+			}
 
 			a {
 				color: $blue;
@@ -120,20 +141,41 @@
 	&__terms,
 	&__studio {
 		width: 50%;
+
+		@media ($phones) {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	&__terms {
 		float: left;
 		text-align: left;
 
+		@media ($phones) {
+			text-align: center;
+			float: none;
+		}
+
 		a {
 			margin-right: 45px;
+
+			@media ($phones) {
+				display: block;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
 		}
 	}
 
 	&__studio {
 		float: right;
 		text-align: right;
+
+		@media ($phones) {
+			float: none;
+			text-align: center;
+		}
 	}
 
 	a {

@@ -89,7 +89,7 @@
 		color: #000;
 	}
 	@include m1000 {
-		padding-top: 50px 
+		padding-top: 70px 
 	}
 }
 
@@ -173,6 +173,7 @@
 		
 		@include m750 {
 			padding-left: 0; 
+			margin-bottom: 55px; 
 		}
 
 		.title {

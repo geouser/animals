@@ -63,6 +63,7 @@ jQuery(document).ready(function($) {
                                   WINDOW WIDTH + RESIZE
     ---------------------------*/
     if ($(window).width() <= 1000) {
+
         $('.firstLevel > .hasUl > a').click(function(){
             $(this).siblings('ul').addClass('shown');
         });
@@ -73,6 +74,9 @@ jQuery(document).ready(function($) {
             event.preventDefault();
             $(this).parent('ul').removeClass('shown');
         });
+
+        var t = $('.sideNav ul')[0].scrollHeight;
+        $('.sideNav ul').css('min-height', t);
     }
     $(window).resize(function() {
       if ($(window).width() <= 1000) {

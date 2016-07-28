@@ -88,6 +88,9 @@
 		font-family: $nsb;
 		color: #000;
 	}
+	@include m1000 {
+		padding-top: 50px 
+	}
 }
 
 .breadcrumbs {
@@ -148,6 +151,9 @@
 		margin: 0 -2px;
 		vertical-align: top;
 		margin-bottom: 125px;
+		@include m750 {
+			width: 100%;
+		}
 	}
 
 	&__preview {
@@ -155,12 +161,19 @@
 		img {
 			max-width: 95%;
 		}
+		@include m750 {
+			margin-bottom: 25px; 
+		}
 	}
 
 	&__list {
 		color: #4a4a4a;
 		text-align: left;
 		padding-left: 50px;
+		
+		@include m750 {
+			padding-left: 0; 
+		}
 
 		.title {
 			font-family: $nsb;

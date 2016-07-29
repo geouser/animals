@@ -111,7 +111,8 @@ jQuery(document).ready(function($) {
         }
     });
 
-
+    $('.offer__slide').has('button').addClass('hasButton');
+    $('.hasButton').parent().addClass('slowShow');
 
     /*---------------------------
                                   Magnific popup

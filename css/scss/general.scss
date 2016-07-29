@@ -691,10 +691,31 @@ h2 {
         color: #FFF;
         font-size: 36px;
         font-family: $nswb;
+        &.animated {
+            -webkit-animation-delay: .3s; 
+            -moz-animation-delay: .3s; 
+            -o-animation-delay: .3s; 
+            animation-delay: .3s; 
+        }
+    }
+    p + h1,
+    p + h2 {
+        &.animated {
+            -webkit-animation-delay: 2s; 
+            -moz-animation-delay: 2s; 
+            -o-animation-delay: 2s; 
+            animation-delay: 2s; 
+        }
     }
     p {
         font: 22px $nsw;
         color: #FFF;
+        &.animated {
+            -webkit-animation-delay: .5s; 
+            -moz-animation-delay: .5s; 
+            -o-animation-delay: .5s; 
+            animation-delay: .5s; 
+        }
     }
     &__slide {
         display: flex !important;
@@ -713,7 +734,18 @@ h2 {
             margin: 55px auto;
         }
     }
+
+    .button {
+        &.animated {
+            -webkit-animation-delay: 3s; 
+            -moz-animation-delay: 3s; 
+            -o-animation-delay: 3s; 
+            animation-delay: 3s; 
+        }
+    }
+
      /*.................media.............*/
+
     @include m1000 {
         &__slide {
             padding: 80px 40px; 
@@ -784,8 +816,45 @@ h2 {
     @include m1000 { 
         bottom: 60px;
     }
+
+     -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+        -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-delay: 1s; 
+      -moz-animation-delay: 1s; 
+      -o-animation-delay: 1s; 
+      animation-delay: 1s; 
+}
+.slowShow {
+    .slick-dots {
+         -webkit-animation-delay: 3s; 
+      -moz-animation-delay: 3s; 
+      -o-animation-delay: 3s; 
+      animation-delay: 3s; 
+    }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 .button {
     background-color: #0CAFD0;

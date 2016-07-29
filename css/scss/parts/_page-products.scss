@@ -97,6 +97,13 @@
 	margin: 28px 0 0;
 	padding: 0;
 	text-align: center;
+	
+	&.animated {
+		-webkit-animation-delay: 1s; 
+		-moz-animation-delay: 1s; 
+		-o-animation-delay: 1s; 
+		animation-delay: 1s; 
+	}
 
 	li {
 		list-style: none;

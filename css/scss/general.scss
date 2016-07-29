@@ -855,6 +855,30 @@ h2 {
     opacity: 1;
   }
 }
+.oneSec {
+      -webkit-animation-delay: 1s; 
+      -moz-animation-delay: 1s; 
+      -o-animation-delay: 1s; 
+      animation-delay: 1s; 
+}
+.twoSec {
+      -webkit-animation-delay: 2s; 
+      -moz-animation-delay: 2s; 
+      -o-animation-delay: 2s; 
+      animation-delay: 2s; 
+}
+.threeSec {
+      -webkit-animation-delay: 3s; 
+      -moz-animation-delay: 3s; 
+      -o-animation-delay: 3s; 
+      animation-delay: 3s; 
+}
+.fourSec {
+      -webkit-animation-delay: 4s; 
+      -moz-animation-delay: 4s; 
+      -o-animation-delay: 4s; 
+      animation-delay: 4s; 
+}
 
 .button {
     background-color: #0CAFD0;

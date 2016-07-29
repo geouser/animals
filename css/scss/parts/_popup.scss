@@ -1,0 +1,14 @@
+.popup {
+	width: 300px;
+	margin: 0 auto;
+	border-radius: 5px;
+	overflow-x: hidden;
+	background-color: #fff;
+	padding: 40px 20px;
+
+	form {
+		.input {
+			width: 100%;
+		}
+	}
+}

@@ -37,6 +37,8 @@
 @import 'parts/page-team';
 
 @import 'parts/page-products';
+
+@import 'parts/popup';
 /*
 
 CSS clearfix----------  @extend %clearfix;
@@ -480,6 +482,14 @@ h2 {
     .wrap {
         position: relative;
         height: 100%;
+
+        &:hover,
+        &.focus {
+            input[type="submit"] {
+                left: 100%;
+                margin-left: -16px;
+            }
+        }
     }
     input {
         background: none;
@@ -488,51 +498,39 @@ h2 {
         height: 20px;
     }
     input[type="submit"] {
-        height: 20px;
+        height: 16px;
         width: 16px;
         display: inline-block;
-        color: red;
-        z-index: 2;
-        margin-top: 20px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -8px;
         background-image: url("../images/search.svg");
         background-repeat: no-repeat;
         text-indent: -10000px;
         border: none;
-        position: relative;
-        z-index: 2;
+        z-index: 4;
         cursor: pointer;
-        transition: all .2s ease;
-        margin-left: -20px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
     }
     input[type="search"] {
-        width: 20px;      
+        width: 100%;      
         font: 14px $ns;
-        margin-top: 20px;
-        position: relative;
-        z-index: 3;
+        height: 100%;
+        z-index: 1;
         transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-        cursor: pointer;
-        &:focus {
-          width: 80%;
-          z-index: 1;
-          border-bottom: 1px solid rgba(255,255,255, .4);
-          cursor: text;  
-          +  input[type="submit"] {
-              z-index: 4;
-              margin-left: 0px;
-          }
-        }
+        cursor: text;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-right: 20px;
+        box-sizing: border-box;
     }
-    &:hover input[type="search"] {
-        width: 80%;
-          z-index: 1;
-          border-bottom: 1px solid rgba(255,255,255, .4);
-          cursor: text;  
-          +  input[type="submit"] {
-              z-index: 4;
-              margin-left: 0px;
-          }
-    }
+
     @include mh750 {
        margin-top: 10px ;
        height: 50px 
@@ -866,7 +864,18 @@ h2 {
     position: relative;
     -webkit-border-radius: 30px;
             border-radius: 30px;
-    &:after {
+    -webkit-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+    -webkit-box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
+       -moz-box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
+            box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    /*&:after {
         content: "";
         display: block;
         position: absolute;
@@ -880,13 +889,18 @@ h2 {
         -webkit-background-size: 100% 100%;
              -o-background-size: 100% 100%;
                 background-size: 100% 100%;
-    }
+    }*/
     &--light {
         background-color: transparent;
-        border: 1px solid #0CB0D1;
+        border: 2px solid #0CB0D1;
         color: #0CB0D1;
         &:after {
             display: none;
+        }
+        &:hover {
+            border-color: $orange;
+            color: $orange;
+            opacity: 1;
         }
     }
 }

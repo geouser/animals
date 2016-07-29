@@ -1,6 +1,7 @@
 .contacts-form {
 	padding-bottom: 185px;
 
+
 	h2 {
 		margin-bottom: 12px;
 	}
@@ -114,8 +115,8 @@
 					transition: all 0.3s ease;
 
 			&:hover {
-				background-color: $blue;
-				color: #fff;
+				border-color: $orange;
+				color: $orange;
 			}
 		}
 	}

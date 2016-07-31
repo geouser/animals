@@ -47,6 +47,13 @@ jQuery(document).ready(function($) {
     });
 
     /*------ side nav li hover-----*/
+
+    $(".sideNav").hover(function() {
+        $('main').addClass("hovered");
+    }, function() {
+        $('main').removeClass("hovered");
+    });
+
     if ($(window).width() > 1000) {
         $('.sideNav li').hover(
             function() {

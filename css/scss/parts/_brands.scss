@@ -10,21 +10,36 @@
 	text-align: left;
 	z-index: 0;}
  
-.brand-countrys { background-position: -5px -0px; width: 130px; height: 58px; }
-.brand-menu { background-position: -5px -63px; width: 120px; height: 26px; }
-.brand-fishlix { background-position: -5px -94px; width: 118px; height: 28px; }
-.brand-mariman { background-position: -5px -127px; width: 118px; height: 32px; }
-.brand-complete { background-position: -5px -164px; width: 118px; height: 18px; }
-.brand-crispy { background-position: -5px -187px; width: 114px; height: 36px; }
-.brand-nature { background-position: -5px -228px; width: 110px; height: 36px; }
-.brand-nutri { background-position: -5px -269px; width: 110px; height: 26px; }
-.brand-optilife { background-position: -5px -300px; width: 110px; height: 24px; }
-.brand-colombine { background-position: -5px -329px; width: 108px; height: 24px; }
-.brand-lara { background-position: -5px -358px; width: 120px; height: 58px; }
-.brand-happy { background-position: -5px -421px; width: 86px; height: 58px; }
-.brand-orlux { background-position: -5px -484px; width: 76px; height: 56px; }
-.brand-cavalor { background-position: -5px -544px; width: 76px; height: 54px; }
+.brand-countrys { background-position: -5px -63px; width: 130px; height: 58px; }
+.brand-menu { background-position: -5px -194px; width: 119px; height: 26px; }
+.brand-fishlix { background-position: -5px -258px; width: 118px; height: 28px; }
+.brand-mariman { background-position: -5px -291px; width: 118px; height: 32px; }
+.brand-complete { background-position: -5px -351px; width: 117px; height: 18px; }
+.brand-crispy { background-position: -5px -417px; width: 114px; height: 38px; }
+.brand-nature { background-position: -5px -502px; width: 110px; height: 38px; }
+.brand-nutri { background-position: -5px -574px; width: 109px; height: 26px; }
+.brand-optilife { background-position: -5px -634px; width: 109px; height: 24px; }
+.brand-colombine { background-position: -5px -692px; width: 108px; height: 24px; }
+.brand-lara { background-position: -5px -784px; width: 101px; height: 58px; }
+.brand-happy { background-position: -5px -910px; width: 85px; height: 57px; }
+.brand-orlux { background-position: -5px -1032px; width: 76px; height: 55px; }
+.brand-cavalor { background-position: -5px -1150px; width: 75px; height: 52px; }
 
+
+a:hover .brand-countrys { background-position: -5px -0px; width: 130px; height: 58px; }
+a:hover .brand-mariman { background-position: -5px -126px; width: 119px; height: 32px; }
+a:hover .brand-menu { background-position: -5px -163px; width: 119px; height: 26px; }
+a:hover .brand-fishlix { background-position: -5px -225px; width: 118px; height: 28px; }
+a:hover .brand-complete { background-position: -5px -328px; width: 117px; height: 18px; }
+a:hover .brand-crispy { background-position: -5px -374px; width: 114px; height: 38px; }
+a:hover .brand-nature { background-position: -5px -458px; width: 110px; height: 38px; }
+a:hover .brand-nutri { background-position: -5px -543px; width: 109px; height: 26px; }
+a:hover .brand-optilife { background-position: -5px -605px; width: 109px; height: 24px; }
+a:hover .brand-colombine { background-position: -5px -663px; width: 108px; height: 24px; }
+a:hover .brand-lara { background-position: -5px -721px; width: 101px; height: 58px; }
+a:hover .brand-happy { background-position: -5px -847px; width: 85px; height: 57px; }
+a:hover .brand-orlux { background-position: -5px -972px; width: 76px; height: 55px; }
+a:hover .brand-cavalor { background-position: -5px -1092px; width: 75px; height: 53px; }
 
 .brands {
 	padding: 0 0 140px;
@@ -59,9 +74,6 @@
 				-ms-transform: translate(-50%, -50%);
 				 -o-transform: translate(-50%, -50%);
 					transform: translate(-50%, -50%);
-			-webkit-transition: opacity 0.3s ease;
-				 -o-transition: opacity 0.3s ease;
-					transition: opacity 0.3s ease;
 		}
 		/*.................media.............*/
         @include m800 {
@@ -71,11 +83,5 @@
         @include m600 {
            width: 50%; 
         }
-
-		&:hover {
-			i {
-				opacity: 0.75;
-			}
-		}
 	}
 }

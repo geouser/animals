@@ -59,6 +59,9 @@
 
 		.caret {
 			background-image: url(../images/arrow-dark.svg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
 			width: 12px;
 			height: 8px;
 			position: absolute;

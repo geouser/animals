@@ -169,7 +169,7 @@ h2 {
 .sideNav {
     @include position(fixed, 0, auto, 0, 0);
     width: 240px;
-    background-color: #0CAFD0;
+    background-color: $blue;
     z-index: 1000;
 
     /*.................media.............*/
@@ -308,6 +308,7 @@ h2 {
                     height: 100%;
                     background-color: rgba(0,0,0, .5);
                     z-index: 2;
+                    filter: blur(20px);
                 }
             }
             /*.................media.............*/
@@ -416,15 +417,6 @@ h2 {
     left: 0; 
 }
 
-.indexPage {
-    .sideNav {
-        background: #0C80D1 !important;
-    }
-    .button {
-        background-color: #0C80D1 !important;
-    }
-}
-
 .lang {
     background-color: #FFF;
     text-align: center;
@@ -437,10 +429,8 @@ h2 {
     margin: auto;
     top: 100%;
     margin-top: -20px;
-    border-top-left-radius: 20px; 
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px; 
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
+    @include transition(all, 0.3s);
     a {
         line-height: 40px;
         font-family: $nsw;
@@ -451,8 +441,12 @@ h2 {
         &:first-child {
             display: block;
         }
-        &.selected {
+        &.selected,
+        &.selected:hover {
             color: #FF5600;
+        }
+        &:hover {
+            color: #fff;
         }
     }
     &:hover {
@@ -509,7 +503,7 @@ h2 {
         background-repeat: no-repeat;
         text-indent: -10000px;
         border: none;
-        z-index: 4;
+        z-index: 1;
         cursor: pointer;
         -webkit-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
@@ -563,6 +557,11 @@ h2 {
         -webkit-background-size: 100% 100%;
              -o-background-size: 100% 100%;
                 background-size: 100% 100%;
+        @include transition(all, 0.3s);
+
+        &:hover {
+            @include transform(scale(1.1));
+        }
     }
     &__fb {
         width: 12px;
@@ -674,6 +673,11 @@ h2 {
         text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
         display: inline-block;
         vertical-align: middle;
+        padding: 0 40px;
+
+        @media ($tablets) {
+            padding: 0 10px;
+        }
         &.noShadow {
             text-shadow: none
         }
@@ -879,7 +883,7 @@ h2 {
 }
 
 .button {
-    background-color: #0CAFD0;
+    background-color: $blue;
     height: 45px;
     padding: 0 45px;
     color: #FFF;
@@ -891,12 +895,11 @@ h2 {
     -webkit-transition: all 0.3s ease;
          -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
-    -webkit-box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
-       -moz-box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
-            box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
 
     &:hover {
-        opacity: 0.7;
+        -webkit-box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
+           -moz-box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
+                box-shadow: 0px 6px 40px -10px rgba(12,175,208,1);
     }
 
     /*&:after {
@@ -916,8 +919,8 @@ h2 {
     }*/
     &--light {
         background-color: transparent;
-        border: 2px solid #0CB0D1;
-        color: #0CB0D1;
+        border: 2px solid $blue;
+        color: $blue;
         -webkit-box-shadow: none;
            -moz-box-shadow: none;
                 box-shadow: none;
@@ -928,6 +931,9 @@ h2 {
             border-color: $orange;
             color: $orange;
             opacity: 1;
+            -webkit-box-shadow: none;
+               -moz-box-shadow: none;
+                    box-shadow: none;
         }
     }
 }

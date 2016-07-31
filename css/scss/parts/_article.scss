@@ -20,7 +20,7 @@
 		font-size: 30.48px;
 		margin-bottom: 15px;
 		span {
-			color: #0CB0D1;
+			color: $blue;
 		}
 		@include m500 {
 		    font-size: 26px; 
